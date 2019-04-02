@@ -4,6 +4,12 @@ const mumble = "#I$* KD*#"
 
 function whatTheySay(){
   console.log(`I wish I could understand what they say when they say "${mumble}"`);
+  debugger;
+  function iAgree(){
+    console.log(`I can understand "${mumble}"`);
+    debugger;
+  }
+  iAgree();
 }
 console.log(whatTheySay());
 
