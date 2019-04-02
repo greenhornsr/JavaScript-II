@@ -3,10 +3,11 @@
 const mumble = "#I$* KD*#"
 
 function whatTheySay(){
+  const mumble2 = "#I$*$&*&&(JHG(*& KD*#*&^%$"
   console.log(`I wish I could understand what they say when they say "${mumble}"`);
   debugger;
   function iAgree(){
-    console.log(`I can understand "${mumble}"`);
+    console.log(`I can understand "${mumble}" but not your "${mumble2}"`);
     debugger;
   }
   iAgree();
