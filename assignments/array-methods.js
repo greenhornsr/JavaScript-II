@@ -103,7 +103,32 @@ console.log(`$ ${ticketPriceTotal} in total donations!`);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
-
+// Big Boss wants to meet her favorite runner who's last name is closest to the end of the alphabet.  Since she won't have time to meet every runner, she wants to create a list of all runners who have a last name starting with "S" or later and schedule them to pick up their running bibs first to ensure she has time to meet with him.
+const reverseRunnerOrder = runners.filter(function(priorityLastNames){
+    return priorityLastNames.last_name >= "S"
+})
+console.log(reverseRunnerOrder);
+// console.log(JSON.stringify(reverseRunnerOrder));
 // Problem 2
+// Big Boss changed her mind.  Everyone's first and last name should be lowercase instead.
+const firstLastNamesLowercase = runners.map(function(allNamesToLowercase){
+    return allNamesToLowercase.first_name.toLowerCase() + " " + allNamesToLowercase.last_name.toLowerCase()
+})
+
+console.log(firstLastNamesLowercase); 
 
 // Problem 3
+// Big Boss thinks if everyone has their donation amounts showing on their bibs, they might donate more.  She is also wants their email addresses printed on the bibs as well so the runners can send hatemail to one another when they see someone not sufficiently supporting the fundraiser.  We need to retreive, first and last names plus email and donation amounts.
+let donationRiotsEnsue = [];
+    // .forEach() 
+    runners.forEach(function(fullDonationAmtPlusEmail){
+        const rfName = fullDonationAmtPlusEmail.first_name;
+        const rlName = fullDonationAmtPlusEmail.last_name;
+        const rEmail = fullDonationAmtPlusEmail.email; 
+        const rDonation = fullDonationAmtPlusEmail.donation; 
+
+
+    donationRiotsEnsue.push(`${rfName} ${rlName} ${rEmail} $${rDonation}`);
+    })
+
+console.log(donationRiotsEnsue.join('  -  '));
