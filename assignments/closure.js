@@ -1,6 +1,18 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+const mumble = "#I$* KD*#"
 
+function whatTheySay(){
+  const mumble2 = "#I$*$&*&&(JHG(*& KD*#*&^%$"
+  console.log(`I wish I could understand what they say when they say "${mumble}"`);
+  debugger;
+  function iAgree(){
+    console.log(`I can understand "${mumble}" but not your "${mumble2}"`);
+    debugger;
+  }
+  iAgree();
+}
+console.log(whatTheySay());
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
